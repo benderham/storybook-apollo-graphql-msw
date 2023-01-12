@@ -1,24 +1,15 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { UserList } from './UserList';
+import { UserListContainer } from './UserListContainer';
 
 export default {
   title: 'App/UserList',
-  component: UserList,
-  args: {
-    users: [
-      {
-        id: 1,
-        name: 'Bruce Wayne',
-        email: 'bruce.wayne@wayneindustries.com',
-      },
-    ],
-  },
-} as ComponentMeta<typeof UserList>;
+  component: UserListContainer,
+} as ComponentMeta<typeof UserListContainer>;
 
-const Template: ComponentStory<typeof UserList> = (args) => (
-  <UserList {...args} />
+const Template: ComponentStory<typeof UserListContainer> = () => (
+  <UserListContainer />
 );
 
-export const Users = Template.bind({});
+export const Default = Template.bind({});
