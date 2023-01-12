@@ -1,5 +1,5 @@
 {
-  "name": "storybook-msw",
+  "name": "storybook-apollo-graphql-msw",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
