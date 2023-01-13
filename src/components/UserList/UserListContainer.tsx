@@ -1,7 +1,6 @@
 import React from 'react';
-import { useQuery } from '@apollo/client';
+import { gql, useQuery } from '@apollo/client';
 
-import { GET_USERS } from './UserListQueries';
 import { UserList } from './UserList';
 
 // Deletes a user using a given id
@@ -12,6 +11,17 @@ import { UserList } from './UserList';
 //     }
 //   }
 // `;
+
+// Queries all users and returns their id, username and email address
+const GET_USERS = gql`
+  query GetUsers {
+    users {
+      id
+      username
+      email
+    }
+  }
+`;
 
 const useGetUsers = () => {
   const { data, loading, error } = useQuery(GET_USERS);
