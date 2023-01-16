@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from '../Button';
 import './UserList.css';
 
 type UserListProps = {
@@ -20,6 +21,7 @@ export const UserList = ({ users }: UserListProps) => {
               <h3>{user.name}</h3>
               <p>{user.email}</p>
             </div>
+            <Button />
           </li>
         ))}
       </ul>
