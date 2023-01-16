@@ -15,6 +15,7 @@ export const handlers = [
   //Handles a "GetUsers" query
   graphql.query<GetUsersQuery>('GetUsers', (req, res, ctx) => {
     return res(
+      ctx.delay(Math.floor(Math.random() * 2500) + 500), // randomises the response time
       ctx.data({ users: mockUsers }) // mock users object from mocks/user-data.ts
     );
   }),
